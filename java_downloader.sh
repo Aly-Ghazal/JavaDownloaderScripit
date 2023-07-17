@@ -1,10 +1,9 @@
 #! /bin/bash
 
 #check if pet-clinic user already exist else create it
-#id
 pet_pass=1234
-
-if [[ `id -u pet-clinic` == "1001" ]]; then
+id -u "pet-clinic" 2> /dev/null
+if [[ `echo '$?'` == "0" ]]; then
 echo "this user is already exist"
 else
 sudo useradd -m -d /home/pet-clinic -c "pet clinic" -s /bin/bash  pet-clinic
