@@ -15,3 +15,16 @@ In this script, we create a user called "pet-clinic" in Linux and proceed to ins
 3- run your script
 
 `./JavaDownloaderScripit/java_downloader.sh`
+
+## Let's test our script
+
+1- switch to pet-clinic
+
+    su pet-clinic
+
+2- enter its password which is "1234"
+
+3- try this command
+
+    java -version
+
