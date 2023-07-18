@@ -3,7 +3,7 @@
 #check if pet-clinic user already exist else create it
 pet_pass=1234
 id -u "pet-clinic" 2> /dev/null
-if [[ `echo '$?'` == "0" ]]; then
+if [[ `echo $?` == 0 ]]; then
 echo "this user is already exist"
 else
 sudo useradd -m -d /home/pet-clinic -c "pet clinic" -s /bin/bash  pet-clinic
@@ -23,8 +23,7 @@ else
 curl -O https://download.java.net/java/GA/jdk18/43f95e8614114aeaa8e8a5fcf20a682d/36/GPL/openjdk-18_linux-x64_bin.tar.gz
 #cp ./openjdk-18_linux-x64_bin.tar.gz  /home/pet-clinic
 tar -xvf /home/pet-clinic/openjdk-18_linux-x64_bin.tar.gz
-echo JAVA_HOME="\"/home/pet-clinic/jdk-18\"" >> ./.bashrc
-echo PATH="\"/home/pet-clinic/jdk-18/bin:$PATH\"" >> ./.bashrc
-source /home/pet-clinic/.bashrc
+echo JAVA_HOME="/home/pet-clinic/jdk-18" >> ./.bashrc
+echo PATH="/home/pet-clinic/jdk-18/bin:$PATH" >> ./.bashrc
 fi
 EOF
