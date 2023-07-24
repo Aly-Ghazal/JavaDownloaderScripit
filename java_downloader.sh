@@ -28,6 +28,7 @@ echo JAVA_HOME="/home/pet-clinic/jdk-18" >> ./.profile
 echo PATH="/home/pet-clinic/jdk-18/bin:$PATH" >> ./.profile
 echo JAVA_HOME="/home/pet-clinic/jdk-18" >> ./.bashrc
 echo PATH="/home/pet-clinic/jdk-18/bin:$PATH" >> ./.bashrc
+source .profile
 fi
 git clone https://github.com/spring-projects/spring-petclinic.git
 EOF
