@@ -26,6 +26,8 @@ curl -O https://download.java.net/java/GA/jdk18/43f95e8614114aeaa8e8a5fcf20a682d
 tar -xvf /home/pet-clinic/openjdk-18_linux-x64_bin.tar.gz
 echo JAVA_HOME="/home/pet-clinic/jdk-18" >> ./.profile
 echo PATH="/home/pet-clinic/jdk-18/bin:$PATH" >> ./.profile
+echo JAVA_HOME="/home/pet-clinic/jdk-18" >> ./.bashrc
+echo PATH="/home/pet-clinic/jdk-18/bin:$PATH" >> ./.bashrc
 fi
 git clone https://github.com/spring-projects/spring-petclinic.git
 EOF
